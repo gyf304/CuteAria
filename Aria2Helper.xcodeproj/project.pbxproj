@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1C1B10212000879111 /* AppDelegate.swift */; };
+		D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1E1B10212000879111 /* ViewController.swift */; };
+		D4C6DA211B10212000879111 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA201B10212000879111 /* Images.xcassets */; };
+		D4C6DA241B10212000879111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA221B10212000879111 /* Main.storyboard */; };
+		D4C6DA301B10212000879111 /* Aria2HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */; };
+		D4C6DA3F1B10334B00879111 /* aria2c.bin in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA3E1B10334B00879111 /* aria2c.bin */; };
+		D4C6DA4C1B10337800879111 /* configuration.js in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA401B10337800879111 /* configuration.js */; };
+		D4C6DA4D1B10337800879111 /* css in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA411B10337800879111 /* css */; };
+		D4C6DA4E1B10337800879111 /* directurl.md in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA421B10337800879111 /* directurl.md */; };
+		D4C6DA4F1B10337800879111 /* Dockerfile in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA431B10337800879111 /* Dockerfile */; };
+		D4C6DA501B10337800879111 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA441B10337800879111 /* favicon.ico */; };
+		D4C6DA511B10337800879111 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA451B10337800879111 /* fonts */; };
+		D4C6DA521B10337800879111 /* img in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA461B10337800879111 /* img */; };
+		D4C6DA531B10337800879111 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA471B10337800879111 /* index.html */; };
+		D4C6DA541B10337800879111 /* js in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA481B10337800879111 /* js */; };
+		D4C6DA551B10337800879111 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA491B10337800879111 /* LICENSE */; };
+		D4C6DA561B10337800879111 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA4A1B10337800879111 /* README.md */; };
+		D4C6DA571B10337800879111 /* screenshots in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA4B1B10337800879111 /* screenshots */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4C6DA2A1B10212000879111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4C6DA0F1B10212000879111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4C6DA161B10212000879111;
+			remoteInfo = Aria2Helper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4C6DA171B10212000879111 /* Aria2Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2Helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C6DA1B1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C6DA1C1B10212000879111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4C6DA1E1B10212000879111 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4C6DA201B10212000879111 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4C6DA231B10212000879111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4C6DA291B10212000879111 /* Aria2HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Aria2HelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C6DA2E1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aria2HelperTests.swift; sourceTree = "<group>"; };
+		D4C6DA3E1B10334B00879111 /* aria2c.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = aria2c.bin; sourceTree = "<group>"; };
+		D4C6DA401B10337800879111 /* configuration.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = configuration.js; sourceTree = "<group>"; };
+		D4C6DA411B10337800879111 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		D4C6DA421B10337800879111 /* directurl.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = directurl.md; sourceTree = "<group>"; };
+		D4C6DA431B10337800879111 /* Dockerfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dockerfile; sourceTree = "<group>"; };
+		D4C6DA441B10337800879111 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		D4C6DA451B10337800879111 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		D4C6DA461B10337800879111 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
+		D4C6DA471B10337800879111 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D4C6DA481B10337800879111 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		D4C6DA491B10337800879111 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D4C6DA4A1B10337800879111 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D4C6DA4B1B10337800879111 /* screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshots; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C6DA141B10212000879111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C6DA261B10212000879111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4C6DA0E1B10212000879111 = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA191B10212000879111 /* Aria2Helper */,
+				D4C6DA2C1B10212000879111 /* Aria2HelperTests */,
+				D4C6DA181B10212000879111 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C6DA181B10212000879111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA171B10212000879111 /* Aria2Helper.app */,
+				D4C6DA291B10212000879111 /* Aria2HelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C6DA191B10212000879111 /* Aria2Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA1C1B10212000879111 /* AppDelegate.swift */,
+				D4C6DA1E1B10212000879111 /* ViewController.swift */,
+				D4C6DA201B10212000879111 /* Images.xcassets */,
+				D4C6DA221B10212000879111 /* Main.storyboard */,
+				D4C6DA1A1B10212000879111 /* Supporting Files */,
+			);
+			path = Aria2Helper;
+			sourceTree = "<group>";
+		};
+		D4C6DA1A1B10212000879111 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA401B10337800879111 /* configuration.js */,
+				D4C6DA411B10337800879111 /* css */,
+				D4C6DA421B10337800879111 /* directurl.md */,
+				D4C6DA431B10337800879111 /* Dockerfile */,
+				D4C6DA441B10337800879111 /* favicon.ico */,
+				D4C6DA451B10337800879111 /* fonts */,
+				D4C6DA461B10337800879111 /* img */,
+				D4C6DA471B10337800879111 /* index.html */,
+				D4C6DA481B10337800879111 /* js */,
+				D4C6DA491B10337800879111 /* LICENSE */,
+				D4C6DA4A1B10337800879111 /* README.md */,
+				D4C6DA4B1B10337800879111 /* screenshots */,
+				D4C6DA3E1B10334B00879111 /* aria2c.bin */,
+				D4C6DA1B1B10212000879111 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4C6DA2C1B10212000879111 /* Aria2HelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */,
+				D4C6DA2D1B10212000879111 /* Supporting Files */,
+			);
+			path = Aria2HelperTests;
+			sourceTree = "<group>";
+		};
+		D4C6DA2D1B10212000879111 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6DA2E1B10212000879111 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C6DA161B10212000879111 /* Aria2Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C6DA331B10212000879111 /* Build configuration list for PBXNativeTarget "Aria2Helper" */;
+			buildPhases = (
+				D4C6DA131B10212000879111 /* Sources */,
+				D4C6DA141B10212000879111 /* Frameworks */,
+				D4C6DA151B10212000879111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aria2Helper;
+			productName = Aria2Helper;
+			productReference = D4C6DA171B10212000879111 /* Aria2Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4C6DA281B10212000879111 /* Aria2HelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C6DA361B10212000879111 /* Build configuration list for PBXNativeTarget "Aria2HelperTests" */;
+			buildPhases = (
+				D4C6DA251B10212000879111 /* Sources */,
+				D4C6DA261B10212000879111 /* Frameworks */,
+				D4C6DA271B10212000879111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4C6DA2B1B10212000879111 /* PBXTargetDependency */,
+			);
+			name = Aria2HelperTests;
+			productName = Aria2HelperTests;
+			productReference = D4C6DA291B10212000879111 /* Aria2HelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C6DA0F1B10212000879111 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Yifan Gu";
+				TargetAttributes = {
+					D4C6DA161B10212000879111 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D4C6DA281B10212000879111 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D4C6DA161B10212000879111;
+					};
+				};
+			};
+			buildConfigurationList = D4C6DA121B10212000879111 /* Build configuration list for PBXProject "Aria2Helper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4C6DA0E1B10212000879111;
+			productRefGroup = D4C6DA181B10212000879111 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C6DA161B10212000879111 /* Aria2Helper */,
+				D4C6DA281B10212000879111 /* Aria2HelperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4C6DA151B10212000879111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C6DA521B10337800879111 /* img in Resources */,
+				D4C6DA4D1B10337800879111 /* css in Resources */,
+				D4C6DA211B10212000879111 /* Images.xcassets in Resources */,
+				D4C6DA241B10212000879111 /* Main.storyboard in Resources */,
+				D4C6DA3F1B10334B00879111 /* aria2c.bin in Resources */,
+				D4C6DA531B10337800879111 /* index.html in Resources */,
+				D4C6DA551B10337800879111 /* LICENSE in Resources */,
+				D4C6DA541B10337800879111 /* js in Resources */,
+				D4C6DA571B10337800879111 /* screenshots in Resources */,
+				D4C6DA4F1B10337800879111 /* Dockerfile in Resources */,
+				D4C6DA4C1B10337800879111 /* configuration.js in Resources */,
+				D4C6DA501B10337800879111 /* favicon.ico in Resources */,
+				D4C6DA511B10337800879111 /* fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C6DA271B10212000879111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C6DA131B10212000879111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */,
+				D4C6DA4E1B10337800879111 /* directurl.md in Sources */,
+				D4C6DA561B10337800879111 /* README.md in Sources */,
+				D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C6DA251B10212000879111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C6DA301B10212000879111 /* Aria2HelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4C6DA2B1B10212000879111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4C6DA161B10212000879111 /* Aria2Helper */;
+			targetProxy = D4C6DA2A1B10212000879111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4C6DA221B10212000879111 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C6DA231B10212000879111 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4C6DA311B10212000879111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4C6DA321B10212000879111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D4C6DA341B10212000879111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Aria2Helper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4C6DA351B10212000879111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Aria2Helper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D4C6DA371B10212000879111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Aria2HelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aria2Helper.app/Contents/MacOS/Aria2Helper";
+			};
+			name = Debug;
+		};
+		D4C6DA381B10212000879111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Aria2HelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aria2Helper.app/Contents/MacOS/Aria2Helper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C6DA121B10212000879111 /* Build configuration list for PBXProject "Aria2Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C6DA311B10212000879111 /* Debug */,
+				D4C6DA321B10212000879111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C6DA331B10212000879111 /* Build configuration list for PBXNativeTarget "Aria2Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C6DA341B10212000879111 /* Debug */,
+				D4C6DA351B10212000879111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4C6DA361B10212000879111 /* Build configuration list for PBXNativeTarget "Aria2HelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C6DA371B10212000879111 /* Debug */,
+				D4C6DA381B10212000879111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4C6DA0F1B10212000879111 /* Project object */;
+}
