@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D414767D1B10F77000AD961A /* statusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D414767C1B10F77000AD961A /* statusIcon.pdf */; };
+		D41476DF1B1157C700AD961A /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41476DC1B1157C700AD961A /* Security.swift */; };
+		D41476E01B1157C700AD961A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41476DE1B1157C700AD961A /* WebSocket.swift */; };
 		D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1C1B10212000879111 /* AppDelegate.swift */; };
 		D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1E1B10212000879111 /* ViewController.swift */; };
 		D4C6DA211B10212000879111 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA201B10212000879111 /* Images.xcassets */; };
@@ -37,7 +40,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D41476DB1B1156EC00AD961A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D414767C1B10F77000AD961A /* statusIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = statusIcon.pdf; sourceTree = "<group>"; };
+		D41476DC1B1157C700AD961A /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		D41476DD1B1157C700AD961A /* Starscream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starscream.h; sourceTree = "<group>"; };
+		D41476DE1B1157C700AD961A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		D4C6DA171B10212000879111 /* Aria2Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2Helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C6DA1B1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C6DA1C1B10212000879111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D41476E11B1157CF00AD961A /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				D41476DC1B1157C700AD961A /* Security.swift */,
+				D41476DD1B1157C700AD961A /* Starscream.h */,
+				D41476DE1B1157C700AD961A /* WebSocket.swift */,
+			);
+			name = Starscream;
+			sourceTree = "<group>";
+		};
 		D4C6DA0E1B10212000879111 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +135,7 @@
 				D4C6DA1E1B10212000879111 /* ViewController.swift */,
 				D4C6DA201B10212000879111 /* Images.xcassets */,
 				D4C6DA221B10212000879111 /* Main.storyboard */,
+				D41476E11B1157CF00AD961A /* Starscream */,
 				D4C6DA1A1B10212000879111 /* Supporting Files */,
 			);
 			path = Aria2Helper;
@@ -127,6 +158,7 @@
 				D4C6DA4B1B10337800879111 /* screenshots */,
 				D4C6DA3E1B10334B00879111 /* aria2c.bin */,
 				D4C6DA1B1B10212000879111 /* Info.plist */,
+				D414767C1B10F77000AD961A /* statusIcon.pdf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,6 +190,7 @@
 				D4C6DA131B10212000879111 /* Sources */,
 				D4C6DA141B10212000879111 /* Frameworks */,
 				D4C6DA151B10212000879111 /* Resources */,
+				D41476DB1B1156EC00AD961A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +266,7 @@
 				D4C6DA211B10212000879111 /* Images.xcassets in Resources */,
 				D4C6DA241B10212000879111 /* Main.storyboard in Resources */,
 				D4C6DA3F1B10334B00879111 /* aria2c.bin in Resources */,
+				D414767D1B10F77000AD961A /* statusIcon.pdf in Resources */,
 				D4C6DA531B10337800879111 /* index.html in Resources */,
 				D4C6DA551B10337800879111 /* LICENSE in Resources */,
 				D4C6DA541B10337800879111 /* js in Resources */,
@@ -259,8 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */,
+				D41476E01B1157C700AD961A /* WebSocket.swift in Sources */,
 				D4C6DA4E1B10337800879111 /* directurl.md in Sources */,
 				D4C6DA561B10337800879111 /* README.md in Sources */,
+				D41476DF1B1157C700AD961A /* Security.swift in Sources */,
 				D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +416,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Starscream-atspjezakzfbpibfejwkoargjqjb/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = Aria2Helper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -392,6 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Starscream-atspjezakzfbpibfejwkoargjqjb/Build/Products/Debug",
+				);
 				INFOPLIST_FILE = Aria2Helper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -454,6 +498,7 @@
 				D4C6DA351B10212000879111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4C6DA361B10212000879111 /* Build configuration list for PBXNativeTarget "Aria2HelperTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +507,7 @@
 				D4C6DA381B10212000879111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
