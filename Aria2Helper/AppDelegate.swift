@@ -37,9 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     override func awakeFromNib() {
 
         //Add statusBarItem
-        statusBarItemSpeed = statusBar.statusItemWithLength(80)
+        statusBarItemSpeed = statusBar.statusItemWithLength(85)
         statusBarItemSpeed.menu = menuSpeed
-        statusBarItemSpeed.title = ""
+        statusBarItemSpeed.title = "◀ Options  "
         
         
         //Add statusBarItem
@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
 
         
         //Add menuItem to menu
-        menuItemUI.title = "Show WebUI"
+        menuItemUI.title = "Show Controls"
         menuItemUI.action = Selector("runUI")
         menuItemUI.keyEquivalent = ""
         menu.addItem(menuItemUI)
@@ -149,10 +149,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
             var readableSpeed = downloadSpeed
             var suffix = "B/s"
             if readableSpeed >= 1000.0 {
-                readableSpeed = readableSpeed / 1024.0
-                suffix = "KB/s"
+                readableSpeed = readableSpeed / 1000.0
+                suffix = "kB/s"
                 if readableSpeed >= 1000.0 {
-                    readableSpeed = readableSpeed / 1024.0
+                    readableSpeed = readableSpeed / 1000.0
                     suffix = "MB/s"
                 }
             }
@@ -217,7 +217,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     //Websocket callbacks
     
     func websocketDidConnect(socket: WebSocket){
-        statusBarItemSpeed.title = "Starting"
         statusUpdateDaemon = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateStatus"), userInfo: nil, repeats: true)
     }
     func websocketDidDisconnect(socket: WebSocket, error: NSError?){
