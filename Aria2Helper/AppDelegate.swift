@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     
     var aria2cPath = NSBundle.mainBundle().pathForResource("aria2c", ofType: "bin")
     var aria2cTask = NSTask()
-    var aria2cUIPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+    var aria2cUIPath = NSBundle.mainBundle().pathForResource("webui", ofType: "bundle")! + "/index.html"
     var downloadPath = NSSearchPathForDirectoriesInDomains(.DownloadsDirectory,.UserDomainMask, true)[0] as! String
     var isAria2cRunning = false
     var statusBar = NSStatusBar.systemStatusBar()
@@ -48,7 +48,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
         statusBarItem.image = NSImage(named: "statusIcon.pdf")
         statusBarItem.image?.setTemplate(true)
         
-
         
         //Add menuItem to menu
         menuItemUI.title = "Show Controls"
@@ -77,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
         menuItemExit.action = Selector("exitNow")
         menuItemExit.keyEquivalent = ""
         menu.addItem(menuItemExit)
-        
+
         killAllAria2()
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
@@ -121,7 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     }
     
     func runUI(){
-        NSWorkspace.sharedWorkspace().openURL(NSURL(fileURLWithPath: aria2cUIPath!)!)
+        NSWorkspace.sharedWorkspace().openURL(NSURL(fileURLWithPath: aria2cUIPath)!)
     }
     
     func exitNow(){
@@ -138,14 +137,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     }
     
     
-    
-    func updateStatusUI(input: NSDictionary){
+    func updateStatusUI(input: (JSON)){
         var text = ""
-        if let numActiveStr = input["numActive"] as? NSString {
+        if let numActiveStr = input["numActive"].string{
             text = (numActiveStr as String) + "@"
         }
-        if let downloadSpeedStr = input["downloadSpeed"] as? NSString {
-            let downloadSpeed = downloadSpeedStr.doubleValue
+        if let downloadSpeedStr = input["downloadSpeed"].string {
+            let downloadSpeed = (downloadSpeedStr as NSString).doubleValue
             var readableSpeed = downloadSpeed
             var suffix = "B/s"
             if readableSpeed >= 1000.0 {
@@ -167,44 +165,37 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
             options: NSJSONReadingOptions.AllowFragments,
             error:nil)
         
-        if let dict = parsedObject as? NSDictionary {
-            if let id = dict["id"] as? NSString{
-                if id as String == "CuteAriaGlobalStat" {
-                    if let result = dict["result"] as? NSDictionary{
-                        updateStatusUI(result)
-                    }
+        let json = JSON(data: text.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!,
+            options: NSJSONReadingOptions.AllowFragments,
+            error:nil)
+        
+        if let id = json["id"].string{
+            switch id {
+            case "CuteAriaGlobalStat":
+                updateStatusUI(json["result"])
+            case "CuteAriaDownloadComplete":
+                println("dl")
+                if let filePath = json["result"]["files"][0]["path"].string{
+                    postNoti("Download Completed", subtitle: "", informativetext: filePath as String)
                 }
-                if id as String == "CuteAriaDownloadComplete" {
-                    if let result = dict["result"] as? NSDictionary{
-                        if let files = result["files"] as? NSArray{
-                            if let file = files[0] as? NSDictionary{
-                                if let filePath = file["path"] as? NSString{
-                                    if files.count > 1 {
-                                        postNoti("Download Completed", subtitle: String(files.count) + "files", informativetext: filePath as String)
-                                    } else if files.count == 1 {
-                                        postNoti("Download Completed", subtitle: "1 file", informativetext: filePath as String)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-            }
-            if let method = dict["method"] as? NSString{
-                if method == "aria2.onDownloadComplete"{
-                    if let params = dict["params"] as? NSArray{
-                        if let gidContainer = params[0] as? NSDictionary{
-                            if let gid = gidContainer["gid"] as? NSString{
-                                println("complete request sent")
-                                println("{\"jsonrpc\":\"2.0\", \"id\":\"CuteAriaDownloadComplete\", \"method\":\"aria2.tellStatus\", params:[\"" + (gid as String) + "\"]}")
-                                aria2RpcSocket.writeString("{\"jsonrpc\":\"2.0\", \"id\":\"CuteAriaDownloadComplete\", \"method\":\"aria2.tellStatus\", \"params\":[\"" + (gid as String) + "\"]}")
-                            }
-                        }
-                    }
-                }
+            default:
+                break
             }
         }
+
+        if let method = json["method"].string{
+            switch method {
+            case "aria2.onDownloadComplete":
+                if let gid = json["params"][0]["gid"].string {
+                    aria2RpcSocket.writeString("{\"jsonrpc\":\"2.0\", \"id\":\"CuteAriaDownloadComplete\", \"method\":\"aria2.tellStatus\", \"params\":[\"" + (gid as String) + "\"]}")
+                }
+            default:
+                break
+            }
+        }
+            
+        
+
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -220,7 +211,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
         statusUpdateDaemon = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateStatus"), userInfo: nil, repeats: true)
     }
     func websocketDidDisconnect(socket: WebSocket, error: NSError?){
-        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
+            Int64(2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+                self.aria2RpcSocket.connect()
+        }
     }
     func websocketDidReceiveMessage(socket: WebSocket, text: String){
         println(text)
@@ -242,6 +236,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
 
     func shouldPresentNotification(notification: NSUserNotification) -> Bool{
         return true
+    }
+}
+
+
+
+class downloadItem {
+    var isFile : Bool
+    init(uri: String) {
+        if uri.hasPrefix("file://") {
+            isFile = true
+        } else {
+            isFile = false
+        }
+    }
+    func startDownload(){
+        
     }
 }
 

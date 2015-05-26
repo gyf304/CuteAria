@@ -7,27 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D414767D1B10F77000AD961A /* statusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D414767C1B10F77000AD961A /* statusIcon.pdf */; };
-		D41476DF1B1157C700AD961A /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41476DC1B1157C700AD961A /* Security.swift */; };
-		D41476E01B1157C700AD961A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41476DE1B1157C700AD961A /* WebSocket.swift */; };
 		D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1C1B10212000879111 /* AppDelegate.swift */; };
 		D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA1E1B10212000879111 /* ViewController.swift */; };
-		D4C6DA211B10212000879111 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA201B10212000879111 /* Images.xcassets */; };
-		D4C6DA241B10212000879111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA221B10212000879111 /* Main.storyboard */; };
 		D4C6DA301B10212000879111 /* Aria2HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */; };
-		D4C6DA3F1B10334B00879111 /* aria2c.bin in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA3E1B10334B00879111 /* aria2c.bin */; };
-		D4C6DA4C1B10337800879111 /* configuration.js in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA401B10337800879111 /* configuration.js */; };
-		D4C6DA4D1B10337800879111 /* css in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA411B10337800879111 /* css */; };
-		D4C6DA4E1B10337800879111 /* directurl.md in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA421B10337800879111 /* directurl.md */; };
-		D4C6DA4F1B10337800879111 /* Dockerfile in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA431B10337800879111 /* Dockerfile */; };
-		D4C6DA501B10337800879111 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA441B10337800879111 /* favicon.ico */; };
-		D4C6DA511B10337800879111 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA451B10337800879111 /* fonts */; };
-		D4C6DA521B10337800879111 /* img in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA461B10337800879111 /* img */; };
-		D4C6DA531B10337800879111 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA471B10337800879111 /* index.html */; };
-		D4C6DA541B10337800879111 /* js in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA481B10337800879111 /* js */; };
-		D4C6DA551B10337800879111 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA491B10337800879111 /* LICENSE */; };
-		D4C6DA561B10337800879111 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D4C6DA4A1B10337800879111 /* README.md */; };
-		D4C6DA571B10337800879111 /* screenshots in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA4B1B10337800879111 /* screenshots */; };
+		D4D531BB1B14FBE300EA209F /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D531B81B14FBE300EA209F /* Security.swift */; };
+		D4D531BC1B14FBE300EA209F /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D531BA1B14FBE300EA209F /* WebSocket.swift */; };
+		D4D532BA1B14FE7D00EA209F /* webui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4D532B91B14FE7D00EA209F /* webui.bundle */; };
+		D4D532BC1B14FE9400EA209F /* webui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4D532B91B14FE7D00EA209F /* webui.bundle */; };
+		D4D532BD1B14FE9D00EA209F /* aria2c.bin in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA3E1B10334B00879111 /* aria2c.bin */; };
+		D4D532BE1B14FEB400EA209F /* statusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D414767C1B10F77000AD961A /* statusIcon.pdf */; };
+		D4D532BF1B14FFBA00EA209F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA221B10212000879111 /* Main.storyboard */; };
+		D4D532DD1B1501E900EA209F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D4D532DB1B1501E900EA209F /* LICENSE */; };
+		D4D532DE1B1501E900EA209F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D532DC1B1501E900EA209F /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +46,6 @@
 
 /* Begin PBXFileReference section */
 		D414767C1B10F77000AD961A /* statusIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = statusIcon.pdf; sourceTree = "<group>"; };
-		D41476DC1B1157C700AD961A /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
-		D41476DD1B1157C700AD961A /* Starscream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starscream.h; sourceTree = "<group>"; };
-		D41476DE1B1157C700AD961A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		D4C6DA171B10212000879111 /* Aria2Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2Helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C6DA1B1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C6DA1C1B10212000879111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,18 +56,12 @@
 		D4C6DA2E1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aria2HelperTests.swift; sourceTree = "<group>"; };
 		D4C6DA3E1B10334B00879111 /* aria2c.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = aria2c.bin; sourceTree = "<group>"; };
-		D4C6DA401B10337800879111 /* configuration.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = configuration.js; sourceTree = "<group>"; };
-		D4C6DA411B10337800879111 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
-		D4C6DA421B10337800879111 /* directurl.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = directurl.md; sourceTree = "<group>"; };
-		D4C6DA431B10337800879111 /* Dockerfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dockerfile; sourceTree = "<group>"; };
-		D4C6DA441B10337800879111 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
-		D4C6DA451B10337800879111 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
-		D4C6DA461B10337800879111 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
-		D4C6DA471B10337800879111 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		D4C6DA481B10337800879111 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
-		D4C6DA491B10337800879111 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		D4C6DA4A1B10337800879111 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D4C6DA4B1B10337800879111 /* screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshots; sourceTree = "<group>"; };
+		D4D531B81B14FBE300EA209F /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Security.swift; path = StarScream/Security.swift; sourceTree = "<group>"; };
+		D4D531B91B14FBE300EA209F /* Starscream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Starscream.h; path = StarScream/Starscream.h; sourceTree = "<group>"; };
+		D4D531BA1B14FBE300EA209F /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = StarScream/WebSocket.swift; sourceTree = "<group>"; };
+		D4D532B91B14FE7D00EA209F /* webui.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = webui.bundle; sourceTree = "<group>"; };
+		D4D532DB1B1501E900EA209F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D4D532DC1B1501E900EA209F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +85,9 @@
 		D41476E11B1157CF00AD961A /* Starscream */ = {
 			isa = PBXGroup;
 			children = (
-				D41476DC1B1157C700AD961A /* Security.swift */,
-				D41476DD1B1157C700AD961A /* Starscream.h */,
-				D41476DE1B1157C700AD961A /* WebSocket.swift */,
+				D4D531B81B14FBE300EA209F /* Security.swift */,
+				D4D531B91B14FBE300EA209F /* Starscream.h */,
+				D4D531BA1B14FBE300EA209F /* WebSocket.swift */,
 			);
 			name = Starscream;
 			sourceTree = "<group>";
@@ -135,6 +117,7 @@
 				D4C6DA1E1B10212000879111 /* ViewController.swift */,
 				D4C6DA201B10212000879111 /* Images.xcassets */,
 				D4C6DA221B10212000879111 /* Main.storyboard */,
+				D4D532DA1B1501E900EA209F /* SwiftyJSON */,
 				D41476E11B1157CF00AD961A /* Starscream */,
 				D4C6DA1A1B10212000879111 /* Supporting Files */,
 			);
@@ -144,18 +127,7 @@
 		D4C6DA1A1B10212000879111 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4C6DA401B10337800879111 /* configuration.js */,
-				D4C6DA411B10337800879111 /* css */,
-				D4C6DA421B10337800879111 /* directurl.md */,
-				D4C6DA431B10337800879111 /* Dockerfile */,
-				D4C6DA441B10337800879111 /* favicon.ico */,
-				D4C6DA451B10337800879111 /* fonts */,
-				D4C6DA461B10337800879111 /* img */,
-				D4C6DA471B10337800879111 /* index.html */,
-				D4C6DA481B10337800879111 /* js */,
-				D4C6DA491B10337800879111 /* LICENSE */,
-				D4C6DA4A1B10337800879111 /* README.md */,
-				D4C6DA4B1B10337800879111 /* screenshots */,
+				D4D532B91B14FE7D00EA209F /* webui.bundle */,
 				D4C6DA3E1B10334B00879111 /* aria2c.bin */,
 				D4C6DA1B1B10212000879111 /* Info.plist */,
 				D414767C1B10F77000AD961A /* statusIcon.pdf */,
@@ -180,6 +152,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D4D532DA1B1501E900EA209F /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				D4D532DB1B1501E900EA209F /* LICENSE */,
+				D4D532DC1B1501E900EA209F /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,7 +170,7 @@
 			buildPhases = (
 				D4C6DA131B10212000879111 /* Sources */,
 				D4C6DA141B10212000879111 /* Frameworks */,
-				D4C6DA151B10212000879111 /* Resources */,
+				D4D532BB1B14FE9100EA209F /* Resources */,
 				D41476DB1B1156EC00AD961A /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -257,31 +238,23 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D4C6DA151B10212000879111 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4C6DA521B10337800879111 /* img in Resources */,
-				D4C6DA4D1B10337800879111 /* css in Resources */,
-				D4C6DA211B10212000879111 /* Images.xcassets in Resources */,
-				D4C6DA241B10212000879111 /* Main.storyboard in Resources */,
-				D4C6DA3F1B10334B00879111 /* aria2c.bin in Resources */,
-				D414767D1B10F77000AD961A /* statusIcon.pdf in Resources */,
-				D4C6DA531B10337800879111 /* index.html in Resources */,
-				D4C6DA551B10337800879111 /* LICENSE in Resources */,
-				D4C6DA541B10337800879111 /* js in Resources */,
-				D4C6DA571B10337800879111 /* screenshots in Resources */,
-				D4C6DA4F1B10337800879111 /* Dockerfile in Resources */,
-				D4C6DA4C1B10337800879111 /* configuration.js in Resources */,
-				D4C6DA501B10337800879111 /* favicon.ico in Resources */,
-				D4C6DA511B10337800879111 /* fonts in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4C6DA271B10212000879111 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D532BA1B14FE7D00EA209F /* webui.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4D532BB1B14FE9100EA209F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D532BF1B14FFBA00EA209F /* Main.storyboard in Resources */,
+				D4D532BC1B14FE9400EA209F /* webui.bundle in Resources */,
+				D4D532BD1B14FE9D00EA209F /* aria2c.bin in Resources */,
+				D4D532BE1B14FEB400EA209F /* statusIcon.pdf in Resources */,
+				D4D532DD1B1501E900EA209F /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,11 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C6DA1F1B10212000879111 /* ViewController.swift in Sources */,
-				D41476E01B1157C700AD961A /* WebSocket.swift in Sources */,
-				D4C6DA4E1B10337800879111 /* directurl.md in Sources */,
-				D4C6DA561B10337800879111 /* README.md in Sources */,
-				D41476DF1B1157C700AD961A /* Security.swift in Sources */,
+				D4D531BC1B14FBE300EA209F /* WebSocket.swift in Sources */,
 				D4C6DA1D1B10212000879111 /* AppDelegate.swift in Sources */,
+				D4D532DE1B1501E900EA209F /* SwiftyJSON.swift in Sources */,
+				D4D531BB1B14FBE300EA209F /* Security.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
