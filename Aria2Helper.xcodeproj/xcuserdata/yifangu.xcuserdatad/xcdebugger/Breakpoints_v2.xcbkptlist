@@ -26,29 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aria2Helper/AppDelegate.swift"
-            timestampString = "454363598.203699"
+            timestampString = "454401216.383622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "parseAria2Rpc(_:)"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "startDownloadFromClipboard()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Aria2Helper/AppDelegate.swift"
-            timestampString = "454363972.144617"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "parseAria2Rpc(_:)"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aria2Helper.downloadItem.__deallocating_deinit"
+                  moduleName = "Aria2Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yifangu/Documents/Aria2Helper/Aria2Helper/Aria2Helper/AppDelegate.swift"
+                  timestampString = "454400254.548883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aria2Helper.downloadItem.deinit"
+                  moduleName = "Aria2Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yifangu/Documents/Aria2Helper/Aria2Helper/Aria2Helper/AppDelegate.swift"
+                  timestampString = "454400254.549075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

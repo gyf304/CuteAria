@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     var menuItemUI : NSMenuItem = NSMenuItem()
     var menuItemOutput : NSMenuItem = NSMenuItem()
     var menuItemAbout : NSMenuItem = NSMenuItem()
+    var menuItemDownloadClipboard : NSMenuItem = NSMenuItem()
     var statusUpdateDaemon = NSTimer()
     var aria2RpcSocket = WebSocket(url: NSURL(string: "http://127.0.0.1:6800/jsonrpc")!)
     var notiCenter = NSUserNotificationCenter.defaultUserNotificationCenter()
@@ -65,6 +66,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
         menuItemOutput.keyEquivalent = ""
         menu.addItem(menuItemOutput)
         */
+        
+        menuItemDownloadClipboard.title = "Start Download from Clipboard"
+        menuItemDownloadClipboard.action = Selector("startDownloadFromClipboard")
+        menuItemDownloadClipboard.keyEquivalent = ""
+        menu.addItem(menuItemDownloadClipboard)
         
         menuItemAbout.title = "About"
         menuItemAbout.action = Selector("showAboutDialog")
@@ -108,7 +114,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     
     func runAria2(){
         aria2cTask.launchPath = aria2cPath!
-        aria2cTask.arguments = ["--dir=" + downloadPath, "--enable-rpc", "--rpc-listen-port=6800"]
+        aria2cTask.arguments = ["--dir=" + downloadPath,
+            "--enable-rpc",
+            "--rpc-listen-port=6800",
+            "--user-agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17\""
+        ]
         aria2cTask.launch()
         isAria2cRunning = true
     }
@@ -134,6 +144,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     
     func updateStatus(){
         aria2RpcSocket.writeString("{\"jsonrpc\":\"2.0\", \"id\":\"CuteAriaGlobalStat\", \"method\":\"aria2.getGlobalStat\"}")
+        // write string directly to reduce cpu load
     }
     
     
@@ -174,9 +185,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
             case "CuteAriaGlobalStat":
                 updateStatusUI(json["result"])
             case "CuteAriaDownloadComplete":
-                println("dl")
                 if let filePath = json["result"]["files"][0]["path"].string{
                     postNoti("Download Completed", subtitle: "", informativetext: filePath as String)
+                }
+            case "CuteAriaBtDownloadComplete":
+                if let filePath = json["result"]["files"][0]["path"].string{
+                    postNoti("BT Download Completed", subtitle: "Still Seeding", informativetext: filePath as String)
                 }
             default:
                 break
@@ -187,15 +201,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
             switch method {
             case "aria2.onDownloadComplete":
                 if let gid = json["params"][0]["gid"].string {
-                    aria2RpcSocket.writeString("{\"jsonrpc\":\"2.0\", \"id\":\"CuteAriaDownloadComplete\", \"method\":\"aria2.tellStatus\", \"params\":[\"" + (gid as String) + "\"]}")
+                    let requestJSON : JSON = ["jsonrpc": "2.0",
+                        "id": "CuteAriaDownloadComplete",
+                        "method": "aria2.tellStatus",
+                        "params": [gid]
+                    ]
+                    aria2RpcSocket.writeString(requestJSON.rawString(encoding: NSUTF8StringEncoding, options: NSJSONWritingOptions())!)
+                }
+            case "aria2.onBtDownloadComplete":
+                if let gid = json["params"][0]["gid"].string {
+                    let requestJSON : JSON = ["jsonrpc": "2.0",
+                        "id": "CuteAriaBtDownloadComplete",
+                        "method": "aria2.tellStatus",
+                        "params": [gid]
+                    ]
+                    aria2RpcSocket.writeString(requestJSON.rawString(encoding: NSUTF8StringEncoding, options: NSJSONWritingOptions())!)
                 }
             default:
                 break
             }
         }
-            
-        
-
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -236,6 +261,30 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
 
     func shouldPresentNotification(notification: NSUserNotification) -> Bool{
         return true
+    }
+    
+    //
+    
+    func startDownloadFromClipboard() {
+        if let str = NSPasteboard.generalPasteboard().stringForType(NSPasteboardTypeString){
+            startDownloadFromUri(str)
+        }
+        
+    }
+    
+    func startDownloadFromUri(uri: String) {
+        if uri.hasPrefix("http://") || uri.hasPrefix("https://") || uri.hasPrefix("ftp://") || uri.hasPrefix("magnet://") || uri.hasPrefix("sftp://"){
+            let requestJSON : JSON = ["jsonrpc": "2.0",
+                "id": "CuteAriaUriDownloadStart",
+                "method": "aria2.addUri",
+                "params": [[uri]]
+            ]
+            aria2RpcSocket.writeString(requestJSON.rawString(encoding: NSUTF8StringEncoding, options: NSJSONWritingOptions())!)
+        } else {
+            postNoti("Cannot Add Download",
+                subtitle: "Address Incorrect",
+                informativetext: "Address should start with http://, https://, magnet:// or sftp://")
+        }
     }
 }
 
