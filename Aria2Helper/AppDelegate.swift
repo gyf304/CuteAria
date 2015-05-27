@@ -16,7 +16,7 @@ import Darwin
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNotificationCenterDelegate {
     
-    var aria2cPath = NSBundle.mainBundle().pathForResource("aria2c", ofType: "bin")
+    var aria2cPath = NSBundle.mainBundle().pathForAuxiliaryExecutable("cutearia-aria2c")
     var aria2cTask = NSTask()
     var aria2cUIPath = NSBundle.mainBundle().pathForResource("webui", ofType: "bundle")! + "/index.html"
     var downloadPath = NSSearchPathForDirectoriesInDomains(.DownloadsDirectory,.UserDomainMask, true)[0] as! String
@@ -106,7 +106,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     func killAllAria2(){
         let pkillTask = NSTask()
         pkillTask.launchPath = "/usr/bin/pkill"
-        pkillTask.arguments = ["aria2c.bin"]
+        pkillTask.arguments = ["cutearia-aria2c"]
         pkillTask.launch()
         pkillTask.waitUntilExit()
         isAria2cRunning = false

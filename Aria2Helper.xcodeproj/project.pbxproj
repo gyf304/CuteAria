@@ -14,11 +14,13 @@
 		D4D531BC1B14FBE300EA209F /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D531BA1B14FBE300EA209F /* WebSocket.swift */; };
 		D4D532BA1B14FE7D00EA209F /* webui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4D532B91B14FE7D00EA209F /* webui.bundle */; };
 		D4D532BC1B14FE9400EA209F /* webui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4D532B91B14FE7D00EA209F /* webui.bundle */; };
-		D4D532BD1B14FE9D00EA209F /* aria2c.bin in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA3E1B10334B00879111 /* aria2c.bin */; };
 		D4D532BE1B14FEB400EA209F /* statusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D414767C1B10F77000AD961A /* statusIcon.pdf */; };
 		D4D532BF1B14FFBA00EA209F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA221B10212000879111 /* Main.storyboard */; };
 		D4D532DD1B1501E900EA209F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D4D532DB1B1501E900EA209F /* LICENSE */; };
 		D4D532DE1B1501E900EA209F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D532DC1B1501E900EA209F /* SwiftyJSON.swift */; };
+		D4D533111B15A2C800EA209F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C6DA201B10212000879111 /* Images.xcassets */; };
+		D4D533251B15A7EF00EA209F /* aria2c.COPYING.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4D533231B15A7EF00EA209F /* aria2c.COPYING.txt */; };
+		D4D533271B15A7FC00EA209F /* cutearia-aria2c in Copy External Binaries */ = {isa = PBXBuildFile; fileRef = D4D533241B15A7EF00EA209F /* cutearia-aria2c */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4D5331C1B15A57800EA209F /* Copy External Binaries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				D4D533271B15A7FC00EA209F /* cutearia-aria2c in Copy External Binaries */,
+			);
+			name = "Copy External Binaries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -55,13 +68,14 @@
 		D4C6DA291B10212000879111 /* Aria2HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Aria2HelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C6DA2E1B10212000879111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C6DA2F1B10212000879111 /* Aria2HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aria2HelperTests.swift; sourceTree = "<group>"; };
-		D4C6DA3E1B10334B00879111 /* aria2c.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = aria2c.bin; sourceTree = "<group>"; };
 		D4D531B81B14FBE300EA209F /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Security.swift; path = StarScream/Security.swift; sourceTree = "<group>"; };
 		D4D531B91B14FBE300EA209F /* Starscream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Starscream.h; path = StarScream/Starscream.h; sourceTree = "<group>"; };
 		D4D531BA1B14FBE300EA209F /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = StarScream/WebSocket.swift; sourceTree = "<group>"; };
 		D4D532B91B14FE7D00EA209F /* webui.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = webui.bundle; sourceTree = "<group>"; };
 		D4D532DB1B1501E900EA209F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D4D532DC1B1501E900EA209F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		D4D533231B15A7EF00EA209F /* aria2c.COPYING.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2c.COPYING.txt; sourceTree = "<group>"; };
+		D4D533241B15A7EF00EA209F /* cutearia-aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "cutearia-aria2c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 				D4C6DA1E1B10212000879111 /* ViewController.swift */,
 				D4C6DA201B10212000879111 /* Images.xcassets */,
 				D4C6DA221B10212000879111 /* Main.storyboard */,
+				D4D533221B15A7EF00EA209F /* Binaries */,
 				D4D532DA1B1501E900EA209F /* SwiftyJSON */,
 				D41476E11B1157CF00AD961A /* Starscream */,
 				D4C6DA1A1B10212000879111 /* Supporting Files */,
@@ -128,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				D4D532B91B14FE7D00EA209F /* webui.bundle */,
-				D4C6DA3E1B10334B00879111 /* aria2c.bin */,
 				D4C6DA1B1B10212000879111 /* Info.plist */,
 				D414767C1B10F77000AD961A /* statusIcon.pdf */,
 			);
@@ -161,6 +175,15 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
+		D4D533221B15A7EF00EA209F /* Binaries */ = {
+			isa = PBXGroup;
+			children = (
+				D4D533231B15A7EF00EA209F /* aria2c.COPYING.txt */,
+				D4D533241B15A7EF00EA209F /* cutearia-aria2c */,
+			);
+			path = Binaries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +193,7 @@
 			buildPhases = (
 				D4C6DA131B10212000879111 /* Sources */,
 				D4C6DA141B10212000879111 /* Frameworks */,
+				D4D5331C1B15A57800EA209F /* Copy External Binaries */,
 				D4D532BB1B14FE9100EA209F /* Resources */,
 				D41476DB1B1156EC00AD961A /* Embed Frameworks */,
 			);
@@ -251,8 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D532BF1B14FFBA00EA209F /* Main.storyboard in Resources */,
+				D4D533251B15A7EF00EA209F /* aria2c.COPYING.txt in Resources */,
+				D4D533111B15A2C800EA209F /* Images.xcassets in Resources */,
 				D4D532BC1B14FE9400EA209F /* webui.bundle in Resources */,
-				D4D532BD1B14FE9D00EA209F /* aria2c.bin in Resources */,
 				D4D532BE1B14FEB400EA209F /* statusIcon.pdf in Resources */,
 				D4D532DD1B1501E900EA209F /* LICENSE in Resources */,
 			);
