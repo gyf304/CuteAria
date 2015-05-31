@@ -273,7 +273,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
     }
     
     func startDownloadFromUri(uri: String) {
-        if uri.hasPrefix("http://") || uri.hasPrefix("https://") || uri.hasPrefix("ftp://") || uri.hasPrefix("magnet://") || uri.hasPrefix("sftp://"){
+        if uri.hasPrefix("http://") || uri.hasPrefix("https://") || uri.hasPrefix("ftp://") || uri.hasPrefix("magnet:?") || uri.hasPrefix("sftp://"){
             let requestJSON : JSON = ["jsonrpc": "2.0",
                 "id": "CuteAriaUriDownloadStart",
                 "method": "aria2.addUri",
@@ -283,7 +283,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebSocketDelegate, NSUserNot
         } else {
             postNoti("Cannot Add Download",
                 subtitle: "Address Incorrect",
-                informativetext: "Address should start with http://, https://, magnet:// or sftp://")
+                informativetext: "Address should start with http://, https://, magnet:? or sftp://")
         }
     }
 }
